@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crud</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+
+    <section class="container">
+
+
+
+        <label for="pn">Product Name</label>
+        <input required class="form-control" type="text" id="pn">
+
+        <label for="pp">Product Price</label>
+        <input required class="form-control" type="number" id="pp">
+
+        <label for="pc">Product Category</label>
+        <input required class="form-control" type="text" id="pc">
+
+
+        <label for="pd">Product Description</label>
+        <textarea class="form-control" id="pd"></textarea>
+
+        <button id="addProductButton" onclick="getValues()" class="btn btn-outline-danger mt-3">ADD</button>
+        <button onclick="updateTheValues()" id="updateButton" class="btn btn-outline-warning mt-3"  style="display: none;">Update</button>
+        <input  onkeyup="searchProduct(this.value)" type="text" id="searchInput" class="my-3 form-control" placeholder="Search Here">
+
+
+
+        <table class="table table-striped">
+
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Product Price</th>
+                    <th>Product Category</th>
+                    <th>Product Description</th>
+                    <th>Delete</th>
+                    <th>Update</th>
+                </tr>
+            </thead>
+
+            <tbody id="tablebody">
+               
+            </tbody>
+
+        </table>
+
+    </section>
+
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
